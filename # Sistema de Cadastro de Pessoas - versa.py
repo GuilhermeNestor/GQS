@@ -27,6 +27,26 @@ def cadastrar_pessoa(nomes, idades, emails):
     else:
         print("Situacao: Menor de idade")
 
+def consultar_pessoa(nomes):
+    b = input("Nome para consultar:")
+    buscar = buscar_pessoa(b, nomes)
+
+def buscar_pessoa(b, nomes):
+    for i in range(len(nomes)):
+        if b == nomes[i]:
+            exibir_pessoa(i)
+            return i
+    print("Nao encontrado")
+    return -1
+
+def exibir_pessoa(i):
+    print("Nome: " + nome[i])
+    print("Idade: " + str(idade[i]))
+    print("E-mail: " + email[i])
+    print("-------------------------")
+
+
+
 nome = [] 
 idade = []
 email = []
@@ -39,17 +59,9 @@ while op != 5:
     op = menu()
  
     if op == 1:
-            cadastrar_pessoa(nome, idade, email)
+        cadastrar_pessoa(nome, idade, email)
     elif op == 2:
-        b = input("Nome para consultar:")
-        for i in range(len(nome)):
-            if b == nome[i]:
-                print("Nome: " + nome[i])
-                print("Idade: " + str(idade[i]))
-                print("E-mail: " + email[i])
-                break
-            else:
-                print("Nao encontrado")
+        i = consultar_pessoa(nome)
      
     elif op == 3:
         b = input("Nome para alterar: ")
