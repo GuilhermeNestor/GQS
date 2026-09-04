@@ -45,6 +45,17 @@ def exibir_pessoa(i):
     print("E-mail: " + email[i])
     print("-------------------------")
 
+def alterar_pessoa(i, nomes, idades, emails):
+    b = input("Nome para alterar:")
+    for i in range(len(nomes)):
+            if b == nomes[i]:
+                exibir_pessoa(i)
+                nomes[i] = input("digite o novo nome da pessoa: ")
+                idades[i] = int(input("digite a nova idade da pessoa: "))
+                emails[i] = input("digite o novo email da pessoa: ")
+            else:
+                print("Nao encontrado")
+
 
 
 nome = [] 
@@ -64,19 +75,7 @@ while op != 5:
         i = consultar_pessoa(nome)
      
     elif op == 3:
-        b = input("Nome para alterar: ")
-        for i in range(len(nome)):
-            if b == nome[i]:
-                print("Nome: " + nome[i])
-                print("Idade: " + str(idade[i]))
-                print("E-mail: " + email[i])
-                print("-------------------------")
-                nome[i] = input("digite o novo nome da pessoa: ")
-                idade[i] = int(input("digite a nova idade da pessoa: "))
-                email[i] = input("digite o novo email da pessoa: ")
-                break
-            else:
-                print("Nao encontrado")
+        alterar_pessoa(i, nome, idade, email)
     elif op == 4:
         print("Listagem de pessoas cadastradas:")
         for i in range(len(nome)):
