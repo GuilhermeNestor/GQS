@@ -1,6 +1,19 @@
 # Sistema de Cadastro de Pessoas - versao 2
 # novos requisitos: menu, consulta, alteracao e listagem
  
+def menu():
+    print("=========================")
+    print(" CADASTRO DE PESSOAS")
+    print("=========================")
+    print("1 - Cadastrar pessoa")
+    print("2 - Consultar pessoa")
+    print("3 - Alterar pessoa")
+    print("4 - Listar pessoas")
+    print("5 - Sair")
+    op = int(input("Escolha uma opcao: "))
+
+    return op
+
 nome1 = ""
 idade1 = 0
 email1 = ""
@@ -15,15 +28,8 @@ qtd = 0
 op = 0
  
 while op != 5:
-    print("=========================")
-    print(" CADASTRO DE PESSOAS")
-    print("=========================")
-    print("1 - Cadastrar pessoa")
-    print("2 - Consultar pessoa")
-    print("3 - Alterar pessoa")
-    print("4 - Listar pessoas")
-    print("5 - Sair")
-    op = int(input("Escolha uma opcao: "))
+
+    op = menu()
  
     if op == 1:
         if qtd == 3:
