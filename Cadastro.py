@@ -1,6 +1,5 @@
 # Sistema de Cadastro de Pessoas - versao 2
 # novos requisitos: menu, consulta, alteracao e listagem
- 
 def menu():
     print("=========================")
     print(" CADASTRO DE PESSOAS")
@@ -49,13 +48,13 @@ def exibir_pessoa(i):
 def alterar_pessoa(i, nomes, idades, emails):
     b = input("Nome para alterar:")
     for i in range(len(nomes)):
-            if b == nomes[i]:
-                exibir_pessoa(i)
-                nomes[i] = input("digite o novo nome da pessoa: ")
-                idades[i] = int(input("digite a nova idade da pessoa: "))
-                emails[i] = input("digite o novo email da pessoa: ")
-            else:
-                print("Nao encontrado")
+        if b == nomes[i]:
+            exibir_pessoa(i)
+            nomes[i] = input("digite o novo nome da pessoa: ")
+            idades[i] = int(input("digite a nova idade da pessoa: "))                
+            emails[i] = input("digite o novo email da pessoa: ")
+        else:
+            print("Nao encontrado")
 
 def listar_pessoas(nomes, idades, emails):
     print("Listagem de pessoas cadastradas:")
