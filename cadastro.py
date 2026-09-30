@@ -16,9 +16,9 @@ def menu():
     print("4 - Listar pessoas")
     print("5 - Analisar pessoa")
     print("6 - Sair")
-    op = int(input("Escolha uma opcao: "))
+    opcao = int(input("Escolha uma opcao: "))
 
-    return op
+    return opcao
 
 def cadastrar_pessoa(nomes, idades, emails):
     """Cadastra uma pessoa nova nas listas de nomes, idades e e-mails.
@@ -28,14 +28,14 @@ def cadastrar_pessoa(nomes, idades, emails):
     e informa se a pessoa é maior ou menor de idade.
     Retorna: nenhum valor explícito; atualiza as listas e imprime a situação.
     """
-    nome = input("digite o nome da pessoa: ")
-    nomes.append(nome)
-    idade = int(input("digite a idade da pessoa: "))
-    idades.append(idade)
-    email = input("digite o email da pessoa: ")
-    emails.append(email)
+    novo_nome = input("digite o nome da pessoa: ")
+    nomes.append(novo_nome)
+    nova_idade = int(input("digite a idade da pessoa: "))
+    idades.append(nova_idade)
+    novo_email = input("digite o email da pessoa: ")
+    emails.append(novo_email)
 
-    if idade >= 18:
+    if nova_idade >= 18:
         print("Situacao: Maior de idade")
     else:
         print("Situacao: Menor de idade")
@@ -104,7 +104,7 @@ def listar_pessoas(nomes, idades, emails):
     """
     print("Listagem de pessoas cadastradas:")
     for i, nome_pessoa in enumerate((nomes)):
-        print("Nome: " + nomes[i])
+        print("Nome: " + nome_pessoa)
         print("Idade: " + str(idades[i]))
         print("E-mail: " + emails[i])
         print("-------------------------")
@@ -211,7 +211,7 @@ nome = []
 idade = []
 email = []
 
-qtd = 0
+QTD = 0
 op = 0
 
 while op != 6:
