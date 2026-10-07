@@ -1,0 +1,61 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 2034 >>
+stream
+BT
+/F1 20 Tf
+72 720 Td
+BT /F1 24 Tf 72 720 Td (Relatório de evidências da Aula 7) Tj ET
+BT /F1 13 Tf 72 690 Td (Cadastro de Pessoas - refatoracao incremental) Tj ET
+BT /F1 10 Tf 72 665 Td (Data: 2026-10-07) Tj ET
+BT /F1 15 Tf 72 620 Td (1. Progresso do Git) Tj ET
+BT /F1 10 Tf 72 595 Td (refactor: reorganiza a estrutura do projeto) Tj ET
+BT /F1 10 Tf 72 578 Td (refactor: cria classe Pessoa) Tj ET
+BT /F1 10 Tf 72 561 Td (refactor: encapsula operacoes em CadastroPessoas) Tj ET
+BT /F1 10 Tf 72 544 Td (refactor: separa interface da aplicacao) Tj ET
+BT /F1 10 Tf 72 527 Td (docs: atualiza orientacoes de contribuicao) Tj ET
+BT /F1 15 Tf 72 480 Td (2. Evidencias de codigo) Tj ET
+BT /F1 10 Tf 72 455 Td (src/pessoa.py: entidade Pessoa com dados encapsulados.) Tj ET
+BT /F1 10 Tf 72 438 Td (src/cadastro_pessoas.py: estado e operacoes de cadastro.) Tj ET
+BT /F1 10 Tf 72 421 Td (src/main.py: interface de menu e responsividade de entrada.) Tj ET
+BT /F1 10 Tf 72 404 Td (CONTRIBUTING.md: orientacoes de contribuicao.) Tj ET
+BT /F1 15 Tf 72 357 Td (3. Evidencia de execucao) Tj ET
+BT /F1 9 Tf 72 332 Td (Comando: python -c "from src.cadastro_pessoas import CadastroPessoas ...") Tj ET
+BT /F1 10 Tf 72 315 Td (Resultado: cadastro, consulta, alteracao e analise validados.) Tj ET
+BT /F1 10 Tf 72 298 Td (Resultado: diferente registros retornaram os valores esperados.) Tj ET
+BT /F1 15 Tf 72 251 Td (4. Controle de alteracoes) Tj ET
+BT /F1 10 Tf 72 226 Td (O repositorio permanece com cinco etapas de refatoracao no historico.) Tj ET
+BT /F1 10 Tf 72 209 Td (O arquivo de teste temporario nao foi mantido no repositorio.) Tj ET
+BT /F1 10 Tf 72 192 Td (O artefato de bytecode foi excluido do historico e do workspace.) Tj ET
+BT /F1 15 Tf 72 145 Td (5. Conclusao) Tj ET
+BT /F1 10 Tf 72 120 Td (As alteracoes foram organizadas por responsabilidade e o historico) Tj ET
+BT /F1 10 Tf 72 103 Td (deve apresentar as cinco mensagens solicitadas.) Tj ET
+BT /F1 10 Tf 72 86 Td (Documento gerado automaticamente para a evidenciacao da pratica.) Tj ET
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+2397
+%%EOF
