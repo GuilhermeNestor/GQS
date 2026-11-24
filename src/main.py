@@ -1,6 +1,29 @@
 """Interface do sistema de cadastro de pessoas."""
 
 from .cadastro_pessoas import CadastroPessoas
+from .repositorio_pessoas_memoria import RepositorioPessoasMemoria
+from .repositorio_pessoas_mysql import RepositorioPessoasMySQL
+
+USAR_MYSQL = True
+
+
+def criar_repositorio():
+    """Escolhe o armazenamento: MySQL (configurado pelo ambiente) ou memória."""
+    if USAR_MYSQL:
+        return RepositorioPessoasMySQL.a_partir_do_ambiente()
+    return RepositorioPessoasMemoria()
+
+
+def alterar_pessoa(cadastro):
+    """Lê os novos dados e informa se a pessoa foi alterada."""
+    nome = input("Nome para alterar: ")
+    novo_nome = input("Digite o novo nome da pessoa: ")
+    nova_idade = int(input("Digite a nova idade da pessoa: "))
+    novo_email = input("Digite o novo email da pessoa: ")
+    if cadastro.alterar(nome, novo_nome, nova_idade, novo_email):
+        print("Pessoa alterada!")
+    else:
+        print("Nao foi possivel alterar a pessoa")
 
 
 def menu(cadastro):
@@ -30,11 +53,7 @@ def menu(cadastro):
                 print(f"Idade: {pessoa.idade}")
                 print(f"E-mail: {pessoa.email}")
         elif opcao == 3:
-            nome = input("Nome para alterar: ")
-            novo_nome = input("Digite o novo nome da pessoa: ")
-            nova_idade = int(input("Digite a nova idade da pessoa: "))
-            novo_email = input("Digite o novo email da pessoa: ")
-            cadastro.alterar(nome, novo_nome, nova_idade, novo_email)
+            alterar_pessoa(cadastro)
         elif opcao == 4:
             for pessoa in cadastro.listar():
                 print(f"Nome: {pessoa.nome}")
@@ -59,4 +78,4 @@ def menu(cadastro):
 
 
 if __name__ == "__main__":
-    menu(CadastroPessoas())
+    menu(CadastroPessoas(criar_repositorio()))
