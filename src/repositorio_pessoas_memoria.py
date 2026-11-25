@@ -20,10 +20,8 @@ class RepositorioPessoasMemoria(RepositorioPessoas):
         return list(self._pessoas)
 
     def alterar(self, nome, nova_pessoa):
-        pessoa = self.buscar(nome)
-        if pessoa is None:
-            return False
-        pessoa.nome = nova_pessoa.nome
-        pessoa.idade = nova_pessoa.idade
-        pessoa.email = nova_pessoa.email
-        return True
+        for indice, pessoa in enumerate(self._pessoas):
+            if pessoa.nome == nome:
+                self._pessoas[indice] = nova_pessoa
+                return True
+        return False
